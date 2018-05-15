@@ -13,7 +13,7 @@ class RepositoriesController < ApplicationController
 
   body = JSON.parse(@resp.body)
   if @resp.success?
-    @repos = body[:items]
+    @repos = body['items']
   else
     @error = "No repositores by that search item"
   end
