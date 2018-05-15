@@ -16,5 +16,6 @@ class RepositoriesController < ApplicationController
     @repos = body[:items]
   else
     @error = body[:errors]
+  end 
   render 'search'
 end
