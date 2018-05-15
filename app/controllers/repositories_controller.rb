@@ -10,4 +10,5 @@ class RepositoriesController < ApplicationController
       req.params['client_secret'] = 'feb5be490850317508dada7a906f4d263638516d'
       req.params['search'] = params[:query]
   end
+  render 'search'
 end
