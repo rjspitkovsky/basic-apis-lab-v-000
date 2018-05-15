@@ -12,6 +12,9 @@ class RepositoriesController < ApplicationController
   end
 
   body = JSON.parse(@resp.body)
-  @repos = body[:items]
+  if @resp.success?
+    @repos = body[:items]
+  else
+    @error = body[:errors]
   render 'search'
 end
