@@ -15,7 +15,7 @@ class RepositoriesController < ApplicationController
   if @resp.success?
     @repos = body[:items]
   else
-    @error = body[:errors]
+    @error = "No repositores by that search item"
   end
   render 'search'
 end
